@@ -1,9 +1,11 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:just_audio_background/just_audio_background.dart';
 import 'package:provider/provider.dart';
 import 'package:radio_mann/services/podcast_audio_service.dart';
   import 'constants/app_constants.dart';
+import 'firebase_options.dart';
 import 'screens/splash_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/birthday_wish_screen.dart';
@@ -16,6 +18,10 @@ import 'services/audio_service.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   // Keep your orientation settings
   await JustAudioBackground.init(
     androidNotificationChannelId: 'com.radiomann.channel.audio',

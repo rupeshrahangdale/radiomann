@@ -77,8 +77,8 @@ class AppUtils {
   // Alias for launchEmail for backward compatibility
   static Future<bool> sendEmail(
     String email, {
-    String subject = '',
-    String body = '',
+    String subject = 'your subject',
+    String body = 'your message',
   }) async {
     return launchEmail(email, subject: subject, body: body);
   }

@@ -47,7 +47,7 @@ class AppConstants {
   static const String demoAudioURL =
       'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
   static const String demoNotifcationAudioImageURL =
-      'https://radiomann.com/images/logo.png';
+      'asset:///assets/images/logo.png';
 
   // Padding and Margin
   static const double defaultPadding = 16.0;

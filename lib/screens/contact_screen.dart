@@ -140,7 +140,7 @@ class _ContactScreenState extends State<ContactScreen> {
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 32.0),
           child: Text(
-            'Contact information not available',
+            'Contact information not available at the moment.',
             style: TextStyle(fontSize: 16),
           ),
         ),
@@ -176,7 +176,7 @@ class _ContactScreenState extends State<ContactScreen> {
             icon: Icons.email,
             title: 'Email',
             content: _contactInfo!.email!,
-            onTap: () => AppUtils.sendEmail(_contactInfo!.email!),
+            onTap: () => AppUtils.sendEmail(_contactInfo!.email!, subject: 'Inquiry from App' , body: ' Hello I would like to know more about...'),
           ),
           const SizedBox(height: 16),
         ],
@@ -187,6 +187,7 @@ class _ContactScreenState extends State<ContactScreen> {
             icon: Icons.location_on,
             title: 'Address',
             content: _contactInfo!.address!,
+            onTap: () => AppUtils.launchURL(_contactInfo!.address!),
           ),
           const SizedBox(height: 16),
         ],

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1013692787893",
+    "project_id": "radio-219c5",
+    "storage_bucket": "radio-219c5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013692787893:android:4d2f0f3119074d51a8e2fc",
+        "android_client_info": {
+          "package_name": "com.nxtinlbs.radiomann"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqBdUfQZKyWvzxZNBkSTtolvtwXvqCYbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

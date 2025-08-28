@@ -4,15 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
-
 import '../constants/app_constants.dart';
 import '../models/podcast_model.dart';
 import '../models/program_model.dart';
 import '../services/api_service.dart';
 import '../utils/app_utils.dart';
 import '../widgets/custom_app_bar.dart';
-import '../widgets/podcast_player_dialog.dart';
-import './podcast_player_screen.dart';
+ import './podcast_player_screen.dart';
 
 class ProgramsScreen extends StatefulWidget {
   const ProgramsScreen({super.key});
@@ -174,11 +172,10 @@ class _ProgramsScreenState extends State<ProgramsScreen>
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (_) => PodcastPlayerScreen(
-                                podcast: podcast,
-                              ),
+                              builder: (_) =>
+                                  PodcastPlayerScreen(podcast: podcast),
                             ),
-                          )
+                          ),
                         },
                       );
                     },

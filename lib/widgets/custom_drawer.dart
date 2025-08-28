@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
  import '../constants/app_constants.dart';
 import '../sampleui.dart';
+import '../screens/chat_room_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/privacy_policy_screen.dart';
 import '../screens/birthday_wish_screen.dart';
@@ -63,6 +64,19 @@ class CustomDrawer extends StatelessWidget {
                       ),
                     );
                   });
+            },
+          ),
+          _buildDrawerItem(
+            context,
+            icon: Icons.chat,
+            title: 'Public Chat Room',
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const PublicChatPage(),
+                ),
+              );
             },
           ),
           _buildDrawerItem(
